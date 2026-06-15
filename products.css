@@ -1,0 +1,125 @@
+/* Base Layout Config */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Burnt orange underline for the main title */
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 4px;
+    background-color: #CC5A2B;
+    border-radius: 2px;
+}
+
+/* Creates the three parallel columns side-by-side */
+.category-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Individual Category Column Styling */
+.column {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 5px solid #CC5A2B; /* Burnt orange top border */
+}
+
+.column-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Individual card styling */
+.product-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h2 {
+    font-size: 1.1rem;
+    color: #222;
+    margin: 15px 0 8px 0;
+}
+
+/* Burnt orange color for the price tag */
+.product-card .price {
+    font-size: 1.2rem;
+    color: #CC5A2B;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card .description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Burnt Orange Action Button Styling */
+.buy-btn {
+    background-color: #CC5A2B;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* Deeper burnt orange when user hovers mouse over button */
+.buy-btn:hover {
+    background-color: #9E411B;
+}
