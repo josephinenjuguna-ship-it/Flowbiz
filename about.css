@@ -1,38 +1,71 @@
-/* About Page styles */
+/* General Page Styling */
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
-    line-height:1.6;
-    background-color:burnt orange;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #CC5500, #ff8c42);
+    line-height: 1.6;
 }
 
-/* About section */
-.about {
-    max-width:800px;
-    margin:50px auto;
-    padding:20px;
-    background-color:burnt orange;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+/* About Section */
+#about {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Heading */
-.about h1 {
-    text-align:center;
-    color:teal;
-    margin-bottom:20px;
-}
-/* Paragraph */
-.about p {
-    font-size:18px;
-    color:#333;
-    margin-bottom:20px;
+/* Main Heading */
+#about h1 {
+    text-align: center;
+    color: #CC5500;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Mission section */
-.about h2 {
-    color:#333;
-    margin-top:20px;
+/* Subheadings */
+#about h2 {
+    color: #222;
+    margin-top: 30px;
+    border-left: 5px solid #CC5500;
+    padding-left: 10px;
 }
 
+/* Paragraphs */
+#about p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Container */
+.container {
+    width: 100%;
+}
+
+/* Hover Effect */
+#about:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    #about h1 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+}
