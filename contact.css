@@ -1,146 +1,214 @@
-/* Flowbiz Thrift Shop Stylesheet
-   Color Palette: #cc5500 (Burnt Orange) & #ffffff (Pure White)
-*/
+/* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-* {
-    box-sizing: border-box;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #cc5500;
+}
+
+.nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #cc5500;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover {
+    color: #e67e22; /* Orange color for active/hover */
+    border-bottom: 2px solid #e67e22;
+}
+
+.header-icons img {
+    height: 20px;
+    margin-left: 20px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 40px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form-section h2,
+.contact-info-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't expand the element */
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.send-message-btn {
+    background-color: #e67e22; /* Orange */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin-top: 30px;
+    text-transform: uppercase;
     font-weight: bold;
 }
 
-body {
-    
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 15px;
+.send-message-btn:hover {
+    background-color: #d35400; /* Darker orange */
 }
 
-.thrift-box {
-    width: 100%;
-    max-width: 440px;
-    border: 4px solid #ffffff;
-    padding: 30px 25px 25px 25px;
-    box-shadow: 10px 10px 0px #ffffff;
-    
-    background-color: #cc5500;
+/* Contact Info Section */
+.contact-info-section {
+    padding-left: 30px;
+    border-left: 1px solid #eee;
 }
 
-
-.thrift-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-    gap: 10px;
+.info-card {
+    margin-bottom: 30px;
 }
 
-h1 {
-    font-size: 2.5rem;
+.info-card h3 {
+    font-size: 16px;
+    color: #e67e22; /* Orange for headings */
+    margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: -1px;
-    line-height: 0.9;
 }
 
-.status-dot-container {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid #ffffff;
-    padding: 4px 8px;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+.info-card p {
+    margin: 5px 0;
+    line-height: 1.6;
 }
 
-.status-dot {
-    width: 6px;
-    height: 6px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+.info-card a {
+    color: #e67e22;
+    text-decoration: none;
 }
 
-
-
-.shop-description {
-    font-size: 1em;
-    margin-bottom: 20px;
-    letter-spacing: 0.2px;
-    line-height: 1.4;
-    opacity: 0.9;
-    color: black;
+.info-card a:hover {
+    text-decoration: underline;
 }
 
-
-.form-group {
-    margin-bottom: 12px;
+.read-faqs-link {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    display: inline-block;
 }
 
-input, textarea {
-    width: 100%;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 12px;
-    font-size: 0.95rem;
-    outline: none;
-    transition: all 0.2s ease;
-    text-color: #ffffff;
+.read-faqs-link:hover {
+    text-decoration: underline;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #ffffff;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .contact-info-section {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 40px;
+        border-top: 1px solid #eee;
+        padding-top: 30px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
 }
 
-input:focus, textarea:focus {
-    background-color: rgba(255, 255, 255, 0.08);
-    box-shadow: inset 4px 4px 0px #ffffff;
-}
-
-.submit-btn {
-    width: 100%;
+footer {
     background-color: #ffffff;
     color: #cc5500;
-    border: 2px solid #ffffff;
-    padding: 14px;
-    font-size: 1rem;
+    border-top: 4px solid #ffffff; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container p {
+    
+    font-size: 0.85rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.15s ease;
-}
-
-.submit-btn:hover {
-    background-color: #cc5500;
-    color: #ffffff;
-    box-shadow: 4px 4px 0px #ffffff;
-    transform: translate(-2px, -2px);
-}
-
-.submit-btn:active {
-    transform: translate(0, 0);
-    box-shadow: 0px 0px 0px #ffffff;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 2px dashed #ffffff;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-}
-
-@media (max-width: 360px) {
-    .footer-info {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-    }
 }
