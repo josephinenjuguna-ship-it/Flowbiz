@@ -8,4 +8,31 @@ body {
 }
 
 /* About section */
-.about
+.about {
+    max-width:800px;
+    margin:50px auto;
+    padding:20px;
+    background-color:aliceblue;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.about h1 {
+    text-align:center;
+    color:teal;
+    margin-bottom:20px;
+}
+/* Paragraph */
+.about p {
+    font-size:18px;
+    color:#333;
+    margin-bottom:20px;
+}
+
+/* Mission section */
+.about h2 {
+    color:#333;
+    margin-top:20px;
+}
+
