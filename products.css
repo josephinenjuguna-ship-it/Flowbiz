@@ -1,4 +1,4 @@
-/* Base Layout Config */
+/* Base Layout Setup */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 
 body {
     background-color: #fafafa;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 header {
@@ -21,9 +21,10 @@ header h1 {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    margin-top: 20px;
 }
 
-/* Burnt orange underline for the main title */
+/* Burnt orange title underline */
 header h1::after {
     content: '';
     position: absolute;
@@ -35,7 +36,42 @@ header h1::after {
     border-radius: 2px;
 }
 
-/* Creates the three parallel columns side-by-side */
+/* Navigation Bar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+/* Burnt orange link hover */
+.nav-links a:hover {
+    color: #CC5A2B;
+}
+
+/* Side-by-Side Category Columns */
 .category-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,12 +81,12 @@ header h1::after {
     align-items: start;
 }
 
-/* Individual Category Column Styling */
+/* Individual Category Column Box */
 .column {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 12px;
-    border-top: 5px solid #CC5A2B; /* Burnt orange top border */
+    border-top: 5px solid #CC5A2B; /* Burnt orange stripe */
 }
 
 .column-header {
@@ -61,7 +97,7 @@ header h1::after {
     margin-bottom: 20px;
 }
 
-/* Individual card styling */
+/* Product Cards Grid Element */
 .product-card {
     background: white;
     border: 1px solid #eee;
@@ -90,22 +126,15 @@ header h1::after {
     margin: 15px 0 8px 0;
 }
 
-/* Burnt orange color for the price tag */
-.product-card .price {
-    font-size: 1.2rem;
-    color: #CC5A2B;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
 .product-card .description {
     font-size: 0.85rem;
     color: #666;
     margin-bottom: 20px;
     line-height: 1.4;
+    min-height: 40px; /* Keeps card layouts uniform */
 }
 
-/* Burnt Orange Action Button Styling */
+/* Burnt Orange Primary Button */
 .buy-btn {
     background-color: #CC5A2B;
     color: white;
@@ -119,7 +148,7 @@ header h1::after {
     transition: background-color 0.2s;
 }
 
-/* Deeper burnt orange when user hovers mouse over button */
+/* Deeper tone for button hover interaction */
 .buy-btn:hover {
     background-color: #9E411B;
 }
