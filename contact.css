@@ -1,0 +1,146 @@
+/* Flowbiz Thrift Shop Stylesheet
+   Color Palette: #cc5500 (Burnt Orange) & #ffffff (Pure White)
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.thrift-box {
+    width: 100%;
+    max-width: 440px;
+    border: 4px solid #ffffff;
+    padding: 30px 25px 25px 25px;
+    box-shadow: 10px 10px 0px #ffffff;
+    
+    background-color: #cc5500;
+}
+
+
+.thrift-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 0.9;
+}
+
+.status-dot-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #ffffff;
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+
+
+.shop-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    opacity: 0.9;
+    color: black;
+}
+
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+    text-color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ffffff;
+
+}
+
+input:focus, textarea:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 4px 4px 0px #ffffff;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: #cc5500;
+    border: 2px solid #ffffff;
+    padding: 14px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.submit-btn:hover {
+    background-color: #cc5500;
+    color: #ffffff;
+    box-shadow: 4px 4px 0px #ffffff;
+    transform: translate(-2px, -2px);
+}
+
+.submit-btn:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 0px #ffffff;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #ffffff;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 360px) {
+    .footer-info {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

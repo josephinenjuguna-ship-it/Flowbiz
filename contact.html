@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Flowbiz</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="thrift-box">
+        <header class="thrift-header">
+            <h1>FLOWBIZ</h1>
+            <div class="status-dot-container">
+                <span class="status-dot"></span>
+                <span class="status-text">Selling now</span>
+            </div>
+        </header>
+        
+        <p class="shop-description">Curated vintage, retro streetwear, and timeless second-hand gems. Drop a line to talk drops, tags, or trades.</p>
+
+        <form action="#" method="POST" onsubmit="sendAnimation(event)">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="YOUR NAME" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" placeholder="YOUR EMAIL" required autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" rows="2" placeholder="YOUR MESSAGE..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">SEND MESSAGE ↗</button>
+        </form>
+
+        <div class="footer-info">
+            <span class="footer-item">📍 404 THRIFT ALLEY</span>
+            <span class="footer-item">📞 (555) 019-FLOW</span>
+        </div>
+    </div>
